@@ -7,7 +7,7 @@ $md: 768px;
 $sm: 576px;
 $white: #fff;
 $black: #000;
-$primary: #F96D00;
+$primary: #527c39;
 html {
 	overflow-x: hidden;
 }
@@ -164,6 +164,7 @@ h1, h2, h3, h4, h5,
 .navbar-brand {
 	text-transform: uppercase;
 	letter-spacing: .1em;
+	display: block;
 }
 
 .bg-image {
@@ -194,13 +195,13 @@ h1, h2, h3, h4, h5,
   .btn {
 		@media screen and (max-width: $md) {
 			width: 100%!important;
-			border: 1px solid red;
+			border: 1px solid green;
 		}
 	}
 	a {
 		position: relative;
 		color: $white;
-		&:before {
+		&:before {	
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -434,7 +435,7 @@ textarea.form-control {
 		font-size: 16px;
 		text-transform: uppercase;
 		letter-spacing: .5em;
-		color: lighten(#ccc, 3%);
+		color: $primary;
 		font-family: $font-sans-serif;
 		font-weight: 300;
 	}
@@ -466,7 +467,15 @@ textarea.form-control {
 }
 
 .ftco-bg-dark {
-	background: #3c312e;
+	// background: #d89c28;  /* fallback for old browsers */
+	// background: -webkit-linear-gradient(to right, #519a44, #d89c28);  /* Chrome 10-25, Safari 5.1-6 */
+	// background: linear-gradient(to right, #519a44, #d89c28); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-color: #d89c28;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%239c9d38'/%3E%3Cstop offset='1' stop-color='%239c9d38' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%239c9d38'/%3E%3Cstop offset='1' stop-color='%239c9d38' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23519a44'/%3E%3Cstop offset='1' stop-color='%23519a44' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23d89c28'/%3E%3Cstop offset='1' stop-color='%23d89c28' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23519a44'/%3E%3Cstop offset='1' stop-color='%23519a44' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23519a44'/%3E%3Cstop offset='1' stop-color='%23519a44' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+
 }
 
 .ftco-footer {
@@ -486,7 +495,7 @@ textarea.form-control {
 	a {
 		color: rgba($white, .3);
 		&:hover {
-			color: $primary;
+			color: $white;
 		}
 	}
 	.ftco-heading {
@@ -497,7 +506,7 @@ textarea.form-control {
 		font-weight: bold;
 		letter-spacing: .05em;
 		text-transform: uppercase;
-		color: rgba(255,255,255,.6);
+		color: rgb(255, 255, 255);
 	}
 }
 
